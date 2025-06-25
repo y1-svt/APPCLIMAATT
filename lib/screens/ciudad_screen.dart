@@ -1,3 +1,4 @@
+import 'package:app_clima_lt/screens/loading_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:app_clima_lt/utilities/constantes.dart';
 
@@ -36,7 +37,14 @@ class _CityScreenState extends State<CityScreen> {
                 child: null,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return LoadingScreen();
+                    }),
+                  );
+                },
                 child: Text(
                   'Obtener Clima',
                   style: kButtonTextStyle,

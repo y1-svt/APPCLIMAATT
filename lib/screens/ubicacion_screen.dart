@@ -1,3 +1,4 @@
+import 'package:app_clima_lt/screens/ciudad_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:app_clima_lt/utilities/constantes.dart';
 
@@ -36,7 +37,14 @@ class _LocationScreenState extends State<LocationScreen> {
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) {
+                          return CityScreen();
+                        }),
+                      );
+                    },
                     child: Icon(
                       Icons.location_city,
                       size: 50.0,
